@@ -16,7 +16,12 @@ In addition to lending and borrowing, Compound also offers users the ability to 
 ### 1.1.2 Scope 
 
 The following files were studied:
+- [contracts/Governance/Comp.sol](https://github.com/compound-finance/compound-protocol/blob/master/contracts/Governance/Comp.sol)
+- [contracts/Governance/GovernorAlpha.sol](https://github.com/compound-finance/compound-protocol/blob/master/contracts/Governance/GovernorAlpha.sol)
+- [contracts/Governance/GovernorBravoDelegate.sol](https://github.com/compound-finance/compound-protocol/blob/master/contracts/Governance/GovernorBravoDelegate.sol)
+- [contracts/Governance/GovernorBravoDelegateG1.sol](https://github.com/compound-finance/compound-protocol/blob/master/contracts/Governance/GovernorBravoDelegateG1.sol)
 - [contracts/Governance/GovernorBravoDelegateG2.sol](https://github.com/compound-finance/compound-protocol/blob/master/contracts/Governance/GovernorBravoDelegateG2.sol)
+- [contracts/Governance/GovernorBravoInterfaces.sol](https://github.com/compound-finance/compound-protocol/blob/master/contracts/Governance/GovernorBravoInterfaces.sol)
 
 ## 2 Compound Governance
 
@@ -44,11 +49,10 @@ The following is a detailed explanation of how the Compound Governance system op
 
 ### 3.1 Constants
 
-    /// @notice The minimum setable proposal threshold
-        uint public constant MIN_PROPOSAL_THRESHOLD = 50000e18; // 50,000 Comp
-
-        /// @notice The maximum setable proposal threshold
-        uint public constant MAX_PROPOSAL_THRESHOLD = 100000e18; //100,000 Comp
+The proposal threshold is 
+    
+    uint public constant MIN_PROPOSAL_THRESHOLD = 50000e18; // 50,000 Comp
+    uint public constant MAX_PROPOSAL_THRESHOLD = 100000e18; //100,000 Comp
 
 
 ## 4 Design Patterns
