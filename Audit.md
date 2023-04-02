@@ -27,6 +27,8 @@ The following files were studied:
 
 Compound Governance is a system within the Compound Finance platform that allows COMP token holders to participate in the decision-making process of the protocol. The governance system is designed to be decentralized, transparent, and community-driven, meaning that any COMP holder can propose and vote on changes to the platform.
 
+![Gov Diagram]('/gov_diagram.png')
+
 The following is a detailed explanation of how the Compound Governance system operates:
 
 1. COMP: This is an ERC20 Token that determines a user's voting right. 
@@ -49,6 +51,8 @@ The following is a detailed explanation of how the Compound Governance system op
 
 ### 3.5 Governance/GovernorBravoDelegateG2
 
+#### 3.5.1 Constants
+
 1. *Proposal Threshold:* 
     Proposal Threshold is between 50,000 Comp and 100,000 Comp
 
@@ -67,9 +71,18 @@ The following is a detailed explanation of how the Compound Governance system op
 
 4. *Voting Delay:*
     Voting delay is between the next block and about a week after the proposal
-    
+
         uint public constant MIN_VOTING_DELAY = 1;
         uint public constant MAX_VOTING_DELAY = 40320; // About 1 week
+
+5. *Type Hashes:*
+    The domain and Ballot Hashes
+
+        bytes32 public constant DOMAIN_TYPEHASH = keccak256("EIP712Domain(string name,uint256 chainId,address verifyingContract)");
+        bytes32 public constant BALLOT_TYPEHASH = keccak256("Ballot(uint256 proposalId,uint8 support)");
+
+#### 3.5.2 External Functions
+
 
 ## 4 Design Patterns
 
