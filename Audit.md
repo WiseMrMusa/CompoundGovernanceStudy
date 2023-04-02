@@ -49,17 +49,24 @@ The following is a detailed explanation of how the Compound Governance system op
 
 ### 3.5 Governance/GovernorBravoDelegateG2
 
-1. Proposal Threshold: 
-    Proposal Threshold is betweene 50,000 Comp and 100,000 Comp
+1. *Proposal Threshold:* 
+    Proposal Threshold is between 50,000 Comp and 100,000 Comp
 
         uint public constant MIN_PROPOSAL_THRESHOLD = 50000e18; // 50,000 Comp
         uint public constant MAX_PROPOSAL_THRESHOLD = 100000e18; //100,000 Comp
+2. *Quorum:*
+    The minimum no of votes for a proposal
+        uint public constant quorumVotes = 400000e18; // 400,000 = 4% of Comp
 
-2. Voting Period:
+3. *Voting Period:*
     Voting period is between 1 Day and 2 Weeks
         uint public constant MIN_VOTING_PERIOD = 5760; // About 24 hours
         uint public constant MAX_VOTING_PERIOD = 80640; // About 2 weeks
 
+4. *Voting Delay:*
+    Voting delay is between the next block and about a week after the proposal
+        uint public constant MIN_VOTING_DELAY = 1;
+        uint public constant MAX_VOTING_DELAY = 40320; // About 1 week
 
 ## 4 Design Patterns
 
