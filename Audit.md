@@ -42,6 +42,14 @@ The following is a detailed explanation of how the Compound Governance system op
 
 ## 3 Functionalities
 
+### 3.1 Constants
+
+    /// @notice The minimum setable proposal threshold
+        uint public constant MIN_PROPOSAL_THRESHOLD = 50000e18; // 50,000 Comp
+
+        /// @notice The maximum setable proposal threshold
+        uint public constant MAX_PROPOSAL_THRESHOLD = 100000e18; //100,000 Comp
+
 
 ## 4 Design Patterns
 
