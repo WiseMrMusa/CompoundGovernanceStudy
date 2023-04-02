@@ -45,14 +45,20 @@ The following is a detailed explanation of how the Compound Governance system op
 
 8. Implementation: After a successful proposal, the changes are implemented, and the protocol is updated accordingly. Users can track the changes using the Compound Governance Interface or other blockchain explorers.
 
-## 3 Functionalities
+## 3 Contracts
 
-### 3.1 Constants
+### 3.5 Governance/GovernorBravoDelegateG2
 
-The proposal threshold is 
-    
-    uint public constant MIN_PROPOSAL_THRESHOLD = 50000e18; // 50,000 Comp
-    uint public constant MAX_PROPOSAL_THRESHOLD = 100000e18; //100,000 Comp
+1. Proposal Threshold: 
+    Proposal Threshold is betweene 50,000 Comp and 100,000 Comp
+
+        uint public constant MIN_PROPOSAL_THRESHOLD = 50000e18; // 50,000 Comp
+        uint public constant MAX_PROPOSAL_THRESHOLD = 100000e18; //100,000 Comp
+
+2. Voting Period:
+    Voting period is between 1 Day and 2 Weeks
+        uint public constant MIN_VOTING_PERIOD = 5760; // About 24 hours
+        uint public constant MAX_VOTING_PERIOD = 80640; // About 2 weeks
 
 
 ## 4 Design Patterns
