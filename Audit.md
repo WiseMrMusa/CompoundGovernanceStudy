@@ -27,7 +27,7 @@ The following files were studied:
 
 Compound Governance is a system within the Compound Finance platform that allows COMP token holders to participate in the decision-making process of the protocol. The governance system is designed to be decentralized, transparent, and community-driven, meaning that any COMP holder can propose and vote on changes to the platform.
 
-![Gov Diagram]('./gov_diagram.png')
+![Gov Diagram](https://github.com/WiseMrMusa/CompoundGovernanceStudy/blob/main/gov_diagram.png)
 
 The following is a detailed explanation of how the Compound Governance system operates:
 
