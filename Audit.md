@@ -93,21 +93,21 @@ The following is a detailed explanation of how the Compound Governance system op
 
     It can only be instantiated once by the admin and the timelock address cannot be `address(0)` 
 
-    function initialize(address timelock_, address comp_, uint votingPeriod_, uint votingDelay_, uint proposalThreshold_) public {
-        require(address(timelock) == address(0), "GovernorBravo::initialize: can only initialize once");
-        require(msg.sender == admin, "GovernorBravo::initialize: admin only");
-        require(timelock_ != address(0), "GovernorBravo::initialize: invalid timelock address");
-        require(comp_ != address(0), "GovernorBravo::initialize: invalid comp address");
-        require(votingPeriod_ >= MIN_VOTING_PERIOD && votingPeriod_ <= MAX_VOTING_PERIOD, "GovernorBravo::initialize: invalid voting period");
-        require(votingDelay_ >= MIN_VOTING_DELAY && votingDelay_ <= MAX_VOTING_DELAY, "GovernorBravo::initialize: invalid voting delay");
-        require(proposalThreshold_ >= MIN_PROPOSAL_THRESHOLD && proposalThreshold_ <= MAX_PROPOSAL_THRESHOLD, "GovernorBravo::initialize: invalid proposal threshold");
+        function initialize(address timelock_, address comp_, uint votingPeriod_, uint votingDelay_, uint proposalThreshold_) public {
+            require(address(timelock) == address(0), "GovernorBravo::initialize: can only initialize once");
+            require(msg.sender == admin, "GovernorBravo::initialize: admin only");
+            require(timelock_ != address(0), "GovernorBravo::initialize: invalid timelock address");
+            require(comp_ != address(0), "GovernorBravo::initialize: invalid comp address");
+            require(votingPeriod_ >= MIN_VOTING_PERIOD && votingPeriod_ <= MAX_VOTING_PERIOD, "GovernorBravo::initialize: invalid voting period");
+            require(votingDelay_ >= MIN_VOTING_DELAY && votingDelay_ <= MAX_VOTING_DELAY, "GovernorBravo::initialize: invalid voting delay");
+            require(proposalThreshold_ >= MIN_PROPOSAL_THRESHOLD && proposalThreshold_ <= MAX_PROPOSAL_THRESHOLD, "GovernorBravo::initialize: invalid proposal threshold");
 
-        timelock = TimelockInterface(timelock_);
-        comp = CompInterface(comp_);
-        votingPeriod = votingPeriod_;
-        votingDelay = votingDelay_;
-        proposalThreshold = proposalThreshold_;
-    }
+            timelock = TimelockInterface(timelock_);
+            comp = CompInterface(comp_);
+            votingPeriod = votingPeriod_;
+            votingDelay = votingDelay_;
+            proposalThreshold = proposalThreshold_;
+        }
 
 
 ## 4 Design Patterns
